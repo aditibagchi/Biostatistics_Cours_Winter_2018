@@ -1,0 +1,33 @@
+---
+library("Rcmdr", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
+title: "Final_Part_Exam"
+author: "Aditi Bagchi"
+date: "5/11/2018"
+output: html_document
+## First create a Matrix using the data
+
+BloodGroup <- matrix(c(72,230,54,192,16,63,8,15), ncol = 2, byrow = TRUE)
+colnames(BloodGroup) <- c("carriers", "Noncarriers")
+rownames(BloodGroup) <- c("o", "A", "B", "AB")
+BloodGroup
+## Matrix
+carriers Noncarriers
+o        72         230
+A        54         192
+B        16          63
+AB        8          15
+
+ ## statistical test 
+chisq.test(BloodGroup)
+
+### RESULTS
+Pearson's Chi-squared test
+
+data:  BloodGroup
+X-squared = 2.4052, df = 3, p-value = 0.4927
+
+
+
+
+
+
